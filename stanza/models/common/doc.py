@@ -397,7 +397,7 @@ class Sentence:
                 head = Word(word_entry)
             else:
                 # id is index in words list + 1
-                head = self.words[int(word.head) - 1]
+                head = self.tokens[int(word.head) - 1]
                 assert(int(word.head) == int(head.id))
             self.dependencies.append((head, word.deprel, word))
 
